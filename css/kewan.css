@@ -1,0 +1,313 @@
+:root {
+  --blue-color: rgb(25, 40, 63);
+  --green-color: rgb(51, 209, 204);
+  --red-color: #ff3150;
+  --yellow-color: #ffc400;
+  --section-color: #eff7fa;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.main-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.main-btn:hover {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+}
+.main-header::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  bottom: 46px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--green-color);
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+  border: none;
+}
+/* .btn:focus-visible {
+  color: var(--yellow-color);
+  background-color: var(--red-color);
+} */
+/* Start Header */
+.navbar {
+  background-color: var(--blue-color);
+}
+
+.logo .l1 {
+  margin: auto;
+  width: 25px;
+  position: relative;
+  font-size: xx-large;
+  font-weight: bold;
+  height: 30px;
+  background-color: transparent;
+}
+
+.logo h1 {
+  color: var(--main-color-logo, #2196f3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo .h1 {
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: transparent;
+  background-image: linear-gradient(100deg, black 39%, rgb(51, 209, 204) 80%);
+  -webkit-background-clip: text;
+  font-size: 45px;
+}
+
+.logo .h1::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 87%;
+  left: 3%;
+  z-index: 0;
+  background-color: rgb(51, 209, 204);
+}
+.logo .h2 {
+  color: #000000;
+  top: -54%;
+  left: -43%;
+  position: absolute;
+  font-size: 50px;
+}
+
+.navbar .navbar-toggler {
+  color: white;
+  border: 1px solid white;
+}
+.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+  border-color: var(--green-color);
+}
+.navbar .collapse .nav-item a {
+  color: white;
+  font-size: 11px;
+}
+.navbar .collapse .nav-item a:hover,
+.navbar .collapse .nav-item a:focus,
+.navbar .collapse .nav-item .nav-link.active {
+  color: var(--green-color);
+}
+.navbar .btn {
+  font-size: 8px;
+}
+
+.navbar .search {
+  color: var(--green-color);
+  font-size: 13px;
+  border-left: 2px solid var(--green-color);
+  cursor: pointer;
+  display: block;
+}
+
+/* End Header */
+
+/* Start Landing */
+.landing {
+  background-color: var(--blue-color);
+  min-height: calc(100vh - 64.5px);
+}
+.landing p {
+  font-size: 0.75rem;
+}
+/* End Landing */
+/* start feature */
+.feature .feature-box .icons {
+  height: 180px;
+}
+.feature .feature-box .icons svg {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.feature .feature-box .icons .number {
+  font-size: 150px;
+  color: var(--section-color);
+  top: 50%;
+}
+.feature .feature-box .icons .icon {
+  color: var(--green-color);
+  font-size: 3.5rem;
+  bottom: -10px;
+}
+.feature .feature-box h4 {
+  color: var(--yellow-color);
+}
+
+/* End feature */
+/* Start Our Work */
+.our-work {
+  background-color: var(--section-color);
+}
+.our-work ul .active {
+  background-color: var(--red-color);
+  color: var(--yellow-color);
+}
+.our-work ul li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+  color: var(--red-color);
+}
+.our-work .row .box {
+  position: relative;
+  margin-bottom: 5px;
+  overflow: hidden;
+  padding: 5px;
+  background-color: white;
+}
+
+.our-work .row .box::before {
+  content: attr(data-work);
+  position: absolute;
+  width: calc(100% - 10px);
+
+  height: calc(100% - 10px);
+
+  background-color: rgb(51 209 204 / 46%);
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  transition: 0.3s;
+  font-weight: bold;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+.our-work .row .box:hover:before {
+  transform: translateX(0%);
+}
+
+/* End Our Work */
+/* Start Stuff */
+.stuff .description {
+  max-width: 500px;
+}
+.stuff .text p {
+  color: rgba(0, 0, 0, 0.5);
+}
+/* End Stuff */
+/* Start our team */
+.team {
+  background-color: var(--section-color);
+}
+.team h2 {
+  color: var(--yellow-color);
+}
+.team .member {
+  margin-bottom: 5px;
+}
+.team .box {
+  padding: 5px;
+}
+.team .box h4 {
+  background-color: var(--green-color);
+}
+.team .box blockquote {
+  min-height: 100px;
+  margin-top: 20px;
+}
+
+/* End our team */
+/* Start Techs */
+@media (min-width: 300px) {
+  .techs .row div {
+    margin-bottom: 15px;
+  }
+}
+/* End Techs */
+/* Start Project */
+.project {
+  background-color: var(--blue-color);
+}
+
+/* End Project */
+/* Start Subscribe */
+.subscribe {
+  background-color: var(--yellow-color);
+}
+.subscribe input[type="text"] {
+  border: none;
+  border-bottom: 1px solid white;
+}
+.subscribe input[type="text"]:focus {
+  outline: none;
+}
+.subscribe input[type="text"]::placeholder {
+  color: white;
+}
+.subscribe input[type="submit"] {
+  color: var(--yellow-color);
+  background-color: var(--blue-color);
+  margin-top: 10px;
+}
+/* End Subscribe */
+/* Start Footer */
+.footer {
+  background-color: var(--blue-color);
+}
+.footer .row .info .logo {
+  width: 30px;
+  margin-bottom: 15px;
+}
+@media (max-width: 768px) {
+  .footer .row .info .logo {
+    width: 100%;
+  }
+}
+.footer .row .info .copyright > span {
+  color: var(--green-color);
+}
+.footer .row .info .copyright div span {
+  color: var(--yellow-color);
+}
+.footer .row ul li {
+  cursor: pointer;
+}
+.footer .row .social-icon svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+.footer .row .social-icon .facebook {
+  background-color: #1877f2;
+}
+.footer .row .social-icon .twitter {
+  background-color: #1da1f2;
+}
+.footer .row .social-icon .inkedin {
+  background-color: #0a66c2;
+}
+.footer .row .social-icon .youtube {
+  background-color: #ff0000;
+}
+
+/* End Footer */
